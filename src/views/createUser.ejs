@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Create a user</title>
+    </head>
+<body>
+    <div>
+        <form method="POST" action="/create-new-user">
+        <input type="text" name="firstName" placeholder="First name...">
+        <br>
+        <input type="text" name="lastName" placeholder="Last name...">
+        <br>
+        <input type="email" name="email" placeholder="Email...">
+        <br>
+        <input type="password" name="password" placeholder="Password...">
+        <br>
+        <input type="text" name="address" placeholder="Address...">
+        <br>
+        <select name="roldID">
+            <option value="1" selected>Admins</option>
+            <option value="2">Doctors</option>
+            <option value="3">Users</option>
+        </select>
+        <br>
+        <button type="submit">Save</button>
+    </form>
+    </div>
+</body>
+</html>
