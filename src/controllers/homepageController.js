@@ -17,10 +17,9 @@
  }
 
  let getLoginPage = (req, res) => {
-     // return res.render("auth/login.ejs",{
-     //     errors: req.flash("errors")
-     // });
-     return res.render("auth/login.ejs");
+     return res.render("auth/login.ejs",{
+        errors: req.flash("errors")
+     })
  };
 
  let getRegisterPage = (req, res) => {
@@ -79,6 +78,14 @@ let handleRegister = async (req, res) => {
     }
 }
 
+// let handleLogin = (req , res) => {
+//     let user = {
+//         email: req.body.email,
+//         password: req.body.password
+//     }
+//     console.log(user);
+// };
+
 module.exports = {
     getHomepage: getHomepage,
     getNewUserPage: getNewUserPage,
@@ -86,6 +93,7 @@ module.exports = {
     getRegisterPage: getRegisterPage,
     getLoginPage: getLoginPage,
     handleRegister: handleRegister
+    // handleLogin: handleLogin
 };
 
 

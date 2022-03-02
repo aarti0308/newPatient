@@ -7,7 +7,7 @@ import connectFlash from "connect-flash";
 import cookieParser from 'cookie-parser';
 import session from "express-session";
 // import methodOverride from 'method-override';
-// import passport from "passport";
+ import passport from "passport";
 // import session from "./config/session";
 
 
@@ -42,8 +42,8 @@ app.use(bodyParser.urlencoded({extended: true}));
 configViewEngine(app);
 
 // config Passport middleware
-//  app.use(passport.initialize());
-//  app.use(passport.session());
+  app.use(passport.initialize());
+  app.use(passport.session());
 
 //init all web routes
 initWebRoutes(app);
