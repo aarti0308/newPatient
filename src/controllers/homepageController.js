@@ -12,7 +12,6 @@
  let createNewUser = async (req, res) => {
      let user = req.body;
      await userService.createNewUser(user);
-     // await userService.createNewUser(user);
      return res.redirect("/");
  }
 
